@@ -1,2 +1,3 @@
-# cancer_classification
-Classification of research papers into Cancer/Non-Cancer
+# Cancer Classifier
+Research papers from PubMed are provided with PubMedId, Tile and Abstract for each paper. The task is to classify the papers
+into Cancer or Non-Cancer categories
