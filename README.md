@@ -24,7 +24,7 @@ Reasons for choosing this model
 <pre>
 cancer_classification/
 ├── main.py                         # Main: Specify hugging face token, input and output paths
-├── parser.py                       # PLoads and parses input data
+├── parser.py                       # Loads and parses input data
 ├── model.py                        # Loads tokenizer and pre-trained model
 ├── dataset_preparation.py          # Prepares dataset for training
 ├── train.py                        # Fine-tunes the model
