@@ -47,9 +47,11 @@ cancer_classification/
 </pre>
 
 ## Usage
+<pre>
 pip install -r requirements.txt
 python main.py              # Execute the code and save the results at the specified path
-
+</pre>
+  
 ## Future Work
 - Experiment with other models and with greater hardware resources like GPU to find out the best model for this problem statement
 - There are 1000 data points in the input dataset, 70% of which are used for fine-tuning. This works well since the model is few-shot learner. But, performance gains, if any
