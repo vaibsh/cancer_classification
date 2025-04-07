@@ -7,8 +7,8 @@ classify the papers into Cancer or Non-Cancer categories
 - Parses PubMed abstracts and title from the dataset. Pre-processes the parsed data
 - Uses pre-trained tiny-biobert model (via Hugging Face Transformers) for classification.
 - Data is split into train, validation and test datasets in the ratio of 70% train : 10% validation : 20% test
-- The model is fine-tuned on train dataset. Grid search is used to find optimal hyper-params viz. batch_size, num_epochs, weight_decay and learning_rate
-  Information on these hyper-params can be found here: https://huggingface.co/docs/transformers/en/main_classes/trainer
+- The model is fine-tuned on train dataset. Grid search is used to find optimal hyper-params viz. batch_size, num_epochs, weight_decay and 
+  learning_rate. Information on these hyper-params can be found here: https://huggingface.co/docs/transformers/en/main_classes/trainer
 - Performance of the model is computed before and after fine-tuning. Predictions are made on the fine-tuned model
 - Note: For model fine-tuning and testing, text data was used as Abstract only. Experiments were conducted with Abstract only, Title only,
   Title + ' .' + Abstract . Out of these three possibilities, Abstracts only gave the highest performance on the data provided
