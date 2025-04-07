@@ -10,6 +10,8 @@ classify the papers into Cancer or Non-Cancer categories
 - The model is fine-tuned on train dataset. Grid search is used to find optimal hyper-params viz. batch_size, num_epochs, weight_decay and learning_rate
   Information on these hyper-params can be found here: https://huggingface.co/docs/transformers/en/main_classes/trainer
 - Performance of the model is computed before and after fine-tuning. Predictions are made on the fine-tuned model
+- Note: For model fine-tuning and testing, text data was used as Abstract only. Experiments were conducted with Abstract only, Title only,
+  Title + ' .' + Abstract . Out of these three possibilities, Abstracts only gave the highest performance on the data provided
 
 ## Choice of Model
 Model chosen is nlpie/tiny-biobert https://huggingface.co/nlpie/tiny-biobert
@@ -54,6 +56,9 @@ python main.py              # Execute the code and save the results at the speci
   
 ## Future Work
 - Experiment with other models and with greater hardware resources like GPU to find out the best model for this problem statement
-- There are 1000 data points in the input dataset, 70% of which are used for fine-tuning. This works well since the model is few-shot learner. But, performance gains, if any
-  must be experimented with more data points
+- Text data provided in the form of Abstracts, Title must be experimented with further in terms of pre-processing. For instance, does
+  removing tags like "OBJECTIVE:", "BACKGROUND:", "IMPORTANCE:" have any impact on performance. Does combining title and abstract 
+  information have any impact on performance etc 
+- There are 1000 data points in the input dataset, 70% of which are used for fine-tuning. This works well since the model is few-shot 
+  learner. But, performance gains, if any must be experimented with more data points
 - Misclassified PubMed articles must be manually inspected for any words/terms to find out why the articles are getting misclassified
