@@ -19,6 +19,35 @@ Reasons for choosing this model
 - Other models were considered like PubMedBERT, but I found distilled version of BioBERT i.e. tiny-biobert readily available on HuggingFace
 
 ## Project Structure
+<pre>
+```text
+cancer_classification/
+├── main.py                         # Main script to run the full pipeline
+├── parser.py                       # Parses input text files from Dataset/
+├── model.py                        # Loads Tiny BioBERT model and tokenizer
+├── dataset_preparation.py         # Prepares and tokenizes datasets
+├── train.py                        # Fine-tunes the model on training data
+├── grid_search.py                 # Performs hyperparameter tuning
+├── eval.py                         # Evaluates model performance
+├── predict.py                      # Adds classification predictions to dataset
+├── requirements.txt                # List of required Python packages
+│
+├── notebooks/
+│   └── model.ipynb                 # Jupyter notebook for experimentation
+│
+├── results/
+│   ├── base_model_performance.txt         # Results from base model
+│   ├── fine_tuned_model_performance.txt   # Results from fine-tuned model
+│   └── classified_data.csv                # Final predictions with probabilities
+│
+├── Dataset/
+│   ├── Cancer/                     # Cancer-related PubMed abstracts (text files)
+│   └── Non-Cancer/                 # Non-Cancer-related PubMed abstracts
+│
+└── README.md                       # Project overview and usage
+```
+</pre>
+
 cancer_classification/
 main.py                   Main: Specify hugging face token, input and output paths
 parser.py                 Loads and parses input data
