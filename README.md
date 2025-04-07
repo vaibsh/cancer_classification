@@ -20,17 +20,16 @@ Reasons for choosing this model
 
 ## Project Structure
 <pre>
-```text
 cancer_classification/
-├── main.py                         # Main script to run the full pipeline
-├── parser.py                       # Parses input text files from Dataset/
-├── model.py                        # Loads Tiny BioBERT model and tokenizer
-├── dataset_preparation.py         # Prepares and tokenizes datasets
-├── train.py                        # Fine-tunes the model on training data
-├── grid_search.py                 # Performs hyperparameter tuning
+├── main.py                         # Main: Specify hugging face token, input and output paths
+├── parser.py                       # PLoads and parses input data
+├── model.py                        # Loads tokenizer and pre-trained model
+├── dataset_preparation.py          # Prepares dataset for training
+├── train.py                        # Fine-tunes the model
+├── grid_search.py                  # Runs grid search for best hyperparams
 ├── eval.py                         # Evaluates model performance
-├── predict.py                      # Adds classification predictions to dataset
-├── requirements.txt                # List of required Python packages
+├── predict.py                      # Adds predictions to the dataset
+├── requirements.txt                # Dependencies
 │
 ├── notebooks/
 │   └── model.ipynb                 # Jupyter notebook for experimentation
@@ -45,30 +44,7 @@ cancer_classification/
 │   └── Non-Cancer/                 # Non-Cancer-related PubMed abstracts
 │
 └── README.md                       # Project overview and usage
-```
 </pre>
-
-cancer_classification/
-main.py                   Main: Specify hugging face token, input and output paths
-parser.py                 Loads and parses input data
-model.py                  Loads tokenizer and pre-trained model
-dataset_preparation.py    Prepares dataset for training
-train.py                  Fine-tunes the model
-grid_search.py            Runs grid search for best hyperparams
-eval.py                   Evaluates model performance
-predict.py                Adds predictions to the dataset
-requirements.txt          Dependencies
-notebooks/model.ipynb     jupyter Notebook
-README.md                 Project documentation
-
-Input Dataset
-Dataset/Cancer
-Dataset/Non-Cancer
-
-Output Dataset
-results/base_model_performance.txt
-results/fine_tuned_model_performance.txt
-results/classified_data.csv   # Given dataset is classified into Cancer/Non-Cancer categories. Classification scores/probabilities are assigned to these categories
 
 ## Usage
 pip install -r requirements.txt
