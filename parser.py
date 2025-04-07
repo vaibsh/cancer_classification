@@ -35,7 +35,7 @@ def parse_text_files(base_path):
 
                 if len(lines) > 1:
                     title = lines[1].strip().replace('Title: ', '')
-                    title = re.sub(r'^\W+|\W+$', '', title)
+                    title = re.sub(r'^\W+|\W+$', '', title)         # Non-Alphanumeric chars stripped at beginning and end
                 if len(lines) > 2:
                     abstract = ' '.join(line.strip() for line in lines[2:])
                     abstract = abstract.replace('Abstract: ', '')

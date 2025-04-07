@@ -9,7 +9,7 @@ from predict import add_predictions
 
 def main():
     # Parse text files
-    df = parse_text_files(base_path="Dataset")
+    df = parse_text_files(base_path="Dataset")  # Insert input dataset here
 
     # Load model and tokenizer
     token = "<token>"           # Insert your HuggingFace token here
@@ -32,7 +32,7 @@ def main():
     evaluate_model(best_model, tokenizer, df, device, output_path='results/fine_tuned_model_performance.txt')
 
     # Run final predictions
-    predictions_df = add_predictions(df, best_model, tokenizer, device)
+    predictions_df = add_predictions(df, best_model, tokenizer, device, output_path='results/classified_data.csv')
     print(predictions_df.head())
 
 

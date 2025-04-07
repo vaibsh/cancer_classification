@@ -1,10 +1,11 @@
+import os
 import torch
 import torch.nn.functional as F
 import pandas as pd
 from tqdm import tqdm
 tqdm.pandas()
 
-def add_predictions(df, model, tokenizer, device='cpu'):
+def add_predictions(df, model, tokenizer, device, output_path):
     """
     Adds prediction results to a DataFrame with abstracts.
 
@@ -41,4 +42,9 @@ def add_predictions(df, model, tokenizer, device='cpu'):
         ])
 
     df[["Predicted_Category", "Non-Cancer Score", "Cancer Score"]] = df["Abstract"].progress_apply(predict)
+
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    df.to_csv(output_path, index=False)
+
     return df
