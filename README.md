@@ -20,18 +20,17 @@ Reasons for choosing this model
 
 ## Project Structure
 cancer_classification/
-│
-├── main.py                   # Main: Specify hugging face token, input and output paths
-├── parser.py                 # Loads and parses input data
-├── model.py                  # Loads tokenizer and pre-trained model
-├── dataset_preparation.py   # Prepares dataset for training
-├── train.py                 # Fine-tunes the model
-├── grid_search.py           # Runs grid search for best hyperparams
-├── eval.py                  # Evaluates model performance
-├── predict.py               # Adds predictions to the dataset
-└── requirements.txt         # Dependencies
-└── notebooks/model.ipynb    # jupyter Notebook
-└── README.md                # Project documentation
+main.py                   Main: Specify hugging face token, input and output paths
+parser.py                 Loads and parses input data
+model.py                  Loads tokenizer and pre-trained model
+dataset_preparation.py    Prepares dataset for training
+train.py                  Fine-tunes the model
+grid_search.py            Runs grid search for best hyperparams
+eval.py                   Evaluates model performance
+predict.py                Adds predictions to the dataset
+requirements.txt          Dependencies
+notebooks/model.ipynb     jupyter Notebook
+README.md                 Project documentation
 
 Input Dataset
 Dataset/Cancer
