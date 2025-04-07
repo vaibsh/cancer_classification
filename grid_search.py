@@ -29,6 +29,7 @@ def run_grid_search(model, tokenizer, train_dataset, val_dataset, test_dataset, 
     }
 
     """
+    # For testing purpose - keep commented when not in use
     param_grid = {
         "batch_size": [8],
         "num_epochs": [1],
